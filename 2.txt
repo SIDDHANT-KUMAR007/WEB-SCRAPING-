@@ -1,0 +1,18 @@
+Write a Python program to test if a given page is found  on the server.
+
+# import module 
+from urllib.request import urlopen, URLError, HTTPError 
+  
+# exception handling to 
+# catch URL error 
+try: 
+    html = urlopen("https://en.wikipedia.org") 
+  
+except URLError as e: 
+    print("Server not found!") 
+  
+except HTTPError as e: 
+    print("HTTP error") 
+  
+else: 
+    print("Server found") 

@@ -1,0 +1,7 @@
+Python program to extract h1 tag from wikipedia
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+html = urlopen('http://en.wikipedia.org/')
+bsh = BeautifulSoup(html.read(), 'html.parser')
+print(bsh.h1)
